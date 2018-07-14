@@ -11,9 +11,9 @@ All build tools (`autoconf, automake, libtool, pkgconfig, cmake, install and rea
 ```shell
 # run once to install Xcode CLI tools
 $ xcode-select --install
-# clone and build Zcash on macOS
-$ git clone https://github.com/kozyilmaz/zcash-apple.git
-$ cd zcash-apple
+# clone and build Zero on macOS
+$ git clone https://github.com/cryptoforge/zero-apple.git
+$ cd zero-apple
 $ source environment
 $ make
 ```
@@ -39,7 +39,7 @@ bash-3.2$ otool -L out/usr/local/bin/zcashd
 out/usr/local/bin/zcashd:
     /usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1252.0.0)
     /usr/lib/libc++.1.dylib (compatibility version 1.0.0, current version 400.9.0)
-bash-3.2$ otool -L out/usr/local/bin/zcash-cli 
+bash-3.2$ otool -L out/usr/local/bin/zcash-cli
 out/usr/local/bin/zcash-cli:
     /usr/lib/libc++.1.dylib (compatibility version 1.0.0, current version 400.9.0)
     /usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1252.0.0)
@@ -89,8 +89,8 @@ Retrieving: https://z.cash/downloads/sprout-verifying.key
 ######################################################################## 100.0%
 /Users/loki/Library/Application Support/ZcashParams/sprout-verifying.key.dl: OK
 /Users/loki/Library/Application Support/ZcashParams/sprout-verifying.key.dl -> /Users/loki/Library/Application Support/ZcashParams/sprout-verifying.key
-bash-3.2$ 
-bash-3.2$ cat zcash-init 
+bash-3.2$
+bash-3.2$ cat zcash-init
 #!/bin/bash
 
 # excerpted from zclassic/zutil/init-mac.sh
@@ -103,8 +103,8 @@ if [ ! -f "$HOME/Library/Application Support/Zcash/zcash.conf" ]; then
     echo "rpcpassword=$PASSWORD" >> "$HOME/Library/Application Support/Zcash/zcash.conf"
     echo "Complete!"
 fi
-bash-3.2$ 
-bash-3.2$ ./zcash-init 
+bash-3.2$
+bash-3.2$ ./zcash-init
 Creating zcash.conf
 Complete!
 ```
@@ -122,7 +122,7 @@ If you feel this project is useful to you. Feel free to donate.
 
 ### Disclaimer
 This program is not officially endorsed by or associated with the Zcash project and the Zcash company.
-[Zcash®](https://trademarks.justia.com/871/93/zcash-87193130.html) and the 
+[Zcash®](https://trademarks.justia.com/871/93/zcash-87193130.html) and the
 [Zcash® logo](https://trademarks.justia.com/868/84/z-86884549.html) are trademarks of the
 [Zerocoin Electric Coin Company](https://trademarks.justia.com/owners/zerocoin-electric-coin-company-3232749/).
 
@@ -133,4 +133,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
