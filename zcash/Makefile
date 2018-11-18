@@ -3,17 +3,17 @@ target_name ?= zcash
 
 include ../Makefile.build
 
-ZERO_VERSION=mac_code_1.0.14-1
+ZERO_VERSION=master
 
 zcash_clone:
-	if [ ! -d "zero_$(ZERO_VERSION)" ]; then git clone -b $(ZERO_VERSION) https://github.com/cryptoforge/zero.git zero_$(ZERO_VERSION); fi
+	if [ ! -d "zero_$(ZERO_VERSION)" ]; then git clone -b $(ZERO_VERSION) https://github.com/zerocurrencycoin/zero.git zero_$(ZERO_VERSION); fi
 
 zcash_config:
 	#$(call patchme,zcash_$(ZCASH_VERSION))
 
 zcash_build:
 	( cd zero_$(ZERO_VERSION); \
-		LIBTOOLIZE=glibtoolize ./zcutil/build.sh --disable-libs -j ${BSPJOB}; \
+		LIBTOOLIZE=glibtoolize ./zcutil/build.sh -j ${BSPJOB}; \
 	)
 
 zcash_install:
